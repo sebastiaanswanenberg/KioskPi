@@ -16,6 +16,14 @@ echo
 echo
 echo "Install & Upgrade done"
 sleep 15 
+echo "changing default password, change this to something secret later!"
+echo "supersecret" | passwd --stdin pi
+sleep 5
+echo "Setting up hosty add block"
+curl -L git.io/hosty | sh
+sleep 2
+sudo hosty
+sleep 10
 echo "Starting to download Kiosk"
 echo
 echo "Downloading needed files from the server"
